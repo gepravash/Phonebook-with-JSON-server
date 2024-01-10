@@ -35,9 +35,6 @@ function App() {
 
   },[])
 
-  //console.log("persons:",persons)
-  //console.log("display persons", displayPersons)
-
   const addNote = (event) => {
     event.preventDefault()
     for(let i = 0, j = persons.length; i < j; i ++)
@@ -74,6 +71,10 @@ function App() {
         if (personsFilter.length > 0)
         {
             setDisplayPersons(personsFilter)
+        }
+        else
+        {
+            setDisplayPersons([])
         }
 
     }
